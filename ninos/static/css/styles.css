@@ -1,0 +1,28 @@
+body{
+    background:#61b4cf;
+    color:#000;
+}
+input{
+    background:transparent;
+    border:none;
+    border-bottom:3px solid #000;
+    text-align:center;
+    width:50%;
+    font-size:20pt;
+    margin:5px;
+    border-radius:10px;
+}
+input[type='submit']{
+    background:#1e1;
+    border-radius:20px;
+    border:3px solid #000;
+    text-align:center;
+    height:10%;
+    width:50%;
+    font-size:10pt;
+}
+input[type='submit']:hover{
+    background:#fff;
+    border:none;
+    border:3px solid #0ff;
+}

@@ -1,0 +1,62 @@
+<section class="content">
+  <div class="container-fluid">
+    <!-- SELECT2 EXAMPLE -->
+    <div class="card card-default">
+
+      <!-- /.card-header -->
+
+            <div class="card-body">
+                <form action="/confirm" method="post"> {% csrf_token %}
+{% if mode == '1' %}
+<p>Informe seu email, e imediatamente lhe enviaremos um link para que possa continuar o cadastro.</p></p>
+                <div class="row">
+                  <div class="col-md-12">
+                  <div class="form-group">
+                    <label for="id_Email" class="bmd-label-floating">Email</label>
+                    <input type="email" name="email" value="{{email}}" id="id_Email" class="form-control" required>
+                  </div>
+                </div>
+              </div>
+{% elif mode == "0" %}
+                <div class="row">
+                  <div class="col-md-12">
+                  <div class="form-group">
+                    <label for="id_Email" class="bmd-label-floating">Email</label>
+                    <input type="email" name="email" value="" id="id_Email" class="form-control" required>
+                  </div>
+                </div>
+              </div>
+
+              <div class="row">
+                  <div class="col-md-12">
+                  <div class="form-group">
+                    <label for="id_Email" class="bmd-label-floating">Senha</label>
+                    <input type="password" name="senha" value="" id="id_Email" class="form-control" required>
+                  </div>
+                </div>
+              </div>
+{% endif %}
+
+
+
+ <div id="errorsito">
+   {{erro}}
+ </div>
+
+ <button type="submit" align="right" value="submit" class="btn btn btn-info pull-right" required>Enviar</button>
+ <div class="clearfix"></div>
+              </form>
+
+
+            </div>
+
+      <!-- /.card-body -->
+
+    </div>
+    <!-- /.card -->
+
+
+        </div>
+
+</section>
+

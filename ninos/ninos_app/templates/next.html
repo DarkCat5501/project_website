@@ -1,0 +1,18 @@
+<html>
+    <head>
+
+    </head>
+    <body>
+        <h1>
+            {% for i in form.items %}
+            <div>
+                <p>{{i.0}}: {{i.1}}</p>
+            </div>
+            {% endfor %}
+        </h1>
+
+        <form method="GET">
+            <input type="text" name="id"/>
+        </form>
+    </body>
+</html>

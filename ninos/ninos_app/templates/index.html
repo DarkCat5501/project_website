@@ -1,0 +1,146 @@
+
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="utf-8" />
+  <link rel="apple-touch-icon" sizes="76x76" href="../assets/img/apple-icon.png">
+  <link rel="icon" type="image/png" href="../assets/img/favicon.png">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <title>{% block titulo %} {% endblock %}</title>
+  <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no' name='viewport' />
+{% include 'styles.html' %}
+</head>
+
+<body class="">
+  <div class="wrapper ">
+    <div class="sidebar" data-color="azure" data-background-color="white" data-image="{% static "b_st/img/sidebar-1.jpg" %}">
+      <!--
+        Tip 1: You can change the color of the sidebar using: data-color="azure | azure | green | orange | danger"
+
+        Tip 2: you can also add an image using data-image tag
+    -->
+      <div class="logo">
+          <img src="{% static "images/logo_oficial2.png" %}" class="brand-image">
+        <a href="#" class="simple-text logo-normal">
+
+        </a>
+      </div>
+
+{% block quem %}
+<div class="sidebar-wrapper">
+  <ul class="nav">
+        <li class="nav-item active">
+          <a class="nav-link" href="/login?mode=0">
+            <i class="material-icons">contact_support</i>
+            <p>Acessar</p>
+          </a>
+    </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="/login?mode=1">
+              <i class="material-icons">contact_support</i>
+              <p>Cadastre-se</p>
+            </a>
+    </li>
+          <li class="nav-item"   >
+            <a class="nav-link" href="">
+              <i class="material-icons">face</i>
+              <p>Ninos</p>
+            </a>
+          </li>
+
+          <li class="nav-item"   >
+            <a class="nav-link"  href="">
+              <i class="material-icons">face</i>
+              <p>Responsáveis</p>
+            </a>
+          </li>
+
+        <li class="nav-item ">
+          <a class="nav-link" href="">
+            <i class="material-icons">contact_support</i>
+            <p>Sair</p>
+          </a>
+    </li>
+
+    <!--  -->
+  </ul>
+</div>
+{% endblock %}
+
+
+
+    </div>
+    <div class="main-panel">
+      <!-- Navbar -->
+      <nav class="navbar navbar-expand-lg navbar-transparent navbar-absolute fixed-top ">
+        <div class="container-fluid">
+          <div class="navbar-wrapper">
+            <a class="navbar-brand" href="{% url 'home' %}">{{ title }}</a>
+          </div>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" aria-controls="navigation-index" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="navbar-toggler-icon icon-bar"></span>
+            <span class="navbar-toggler-icon icon-bar"></span>
+            <span class="navbar-toggler-icon icon-bar"></span>
+          </button>
+        </div>
+      </nav>
+      <!-- End Navbar -->
+
+            <div class="content">
+              <div class="container-fluid">
+                <div class="row">
+                  <div class="col-md-12">
+                    <div class="card">
+                      <div class="card-header card-header-info">
+                        <h4 class="card-title">{{ subtitle.0 }}</h4>
+                        <p class="card-category">{{ subtitle.1 }}</p>
+                      </div>
+                      <div class="card-body">
+
+
+{% include view %}
+
+
+
+
+    </div>
+  </div>
+</div>
+
+</div>
+</div>
+</div>
+<footer class="footer">
+<div class="container-fluid">
+<nav class="float-left">
+<ul>
+  <li>
+    <a href="{% url 'home' %}">
+      Fale conosco
+    </a>
+  </li>
+
+
+</ul>
+</nav>
+<div class="copyright float-right">
+&copy;
+<script>
+  document.write(new Date().getFullYear())
+</script>, feito do <i class="material-icons">favorite</i> por
+<a href="https://merinosolucoes.com" target="_blank">Merino Soluções</a> para dias melhores.
+</div>
+</div>
+</footer>
+</div>
+</div>
+
+{% include 'scripts.html' %}
+
+</body>
+
+</html>
